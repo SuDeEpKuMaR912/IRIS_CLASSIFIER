@@ -1,6 +1,6 @@
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
-
+from sklearn.metrics import accuracy_score
 
 iris= datasets.load_iris()
 
@@ -37,3 +37,7 @@ newdata=[a,b,c,d]
 #getting classifications for new datasets
 pred=clf.predict([newdata])
 print('RESULT: ',pred) 
+
+#for accuracy but have to create new dataset with actual labels
+'''accuracy= accuracy_score(labels, pred)
+print("model accuracy: ", accuracy)'''
